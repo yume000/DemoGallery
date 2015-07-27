@@ -41,9 +41,9 @@ public class MainActivity extends Activity {
         view.setGravity(Gravity.CENTER);
 
         imageSwitcher = (ImageSwitcher)findViewById(R.id.image_switcher);
-        imageSwitcher.setFactory(new ResetImage());
         imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left));
         imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(context, android.R.anim.slide_out_right));
+        imageSwitcher.setFactory(new ResetImage());
     }
     //scrollview裡的每個image點下去會更換imageswitcher的圖
     private class ImageOnClick implements View.OnClickListener {
